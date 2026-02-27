@@ -1,0 +1,106 @@
+.tree-node {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 10px 0;
+}
+
+.node-circle {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #4caf50;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.node-content {
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-left: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.node-line {
+  position: absolute;
+  left: 17px;
+  top: 40px;
+  bottom: -10px;
+  border-left: 2px dashed #ccc;
+}
+
+.children {
+  margin-left: 40px;
+}
+
+button {
+  border: none;
+  background: #eee;
+  padding: 4px 8px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Light Theme */
+.tree-page.light {
+  background: #f5f5f5;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Dark Theme */
+.tree-page.dark {
+  background: #1e1e2f;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Card Dark Mode */
+.dark .node-content {
+  background: #2a2a3b;
+  color: white;
+}
+
+/* Circle Dark */
+.dark .node-circle {
+  background: #555;
+}
+
+/* Line Dark */
+.dark .node-line {
+  border-left: 2px dashed #666;
+}
+.tree-page.light {
+  min-height: 100vh;
+  padding: 20px;
+
+  /* 🔥 Attractive gradient */
+  background: linear-gradient(135deg, #e0ecff, #f5f7fa);
+}
+.node-content {
+  background: white;
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin-left: 10px;
+
+  /* 🔥 Soft shadow */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.node-circle {
+  background: linear-gradient(135deg, #4caf50, #8bc34a);
+  color: white;
+  font-weight: bold;
+}
+.node-content:hover {
+  transform: translateY(-2px);
+  transition: 0.2s;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
